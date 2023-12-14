@@ -56,6 +56,17 @@
     },
     "@nx/angular:component": {
       "style": "scss"
+    },
+    "@nx/react": {
+      "application": {
+        "babel": true
+      }
+    },
+    "@nx/next": {
+      "application": {
+        "style": "scss",
+        "linter": "eslint"
+      }
     }
   },
   "nxCloudAccessToken": "YTc5Nzc5NDMtMDkyZi00ZjZjLWI4NzQtNjNmMGM0M2E0ZTNhfHJlYWQtd3JpdGU="
