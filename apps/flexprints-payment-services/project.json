@@ -1,0 +1,53 @@
+{
+  "name": "flexprints-payment-services",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/flexprints-payment-services/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/flexprints-payment-services",
+        "main": "apps/flexprints-payment-services/src/main.ts",
+        "tsConfig": "apps/flexprints-payment-services/tsconfig.app.json",
+        "assets": ["apps/flexprints-payment-services/src/assets"],
+        "webpackConfig": "apps/flexprints-payment-services/webpack.config.js"
+      },
+      "configurations": {
+        "development": {},
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "flexprints-payment-services:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "flexprints-payment-services:build:development"
+        },
+        "production": {
+          "buildTarget": "flexprints-payment-services:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/flexprints-payment-services/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}

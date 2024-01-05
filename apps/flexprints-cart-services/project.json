@@ -1,0 +1,53 @@
+{
+  "name": "flexprints-cart-services",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/flexprints-cart-services/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/flexprints-cart-services",
+        "main": "apps/flexprints-cart-services/src/main.ts",
+        "tsConfig": "apps/flexprints-cart-services/tsconfig.app.json",
+        "assets": ["apps/flexprints-cart-services/src/assets"],
+        "webpackConfig": "apps/flexprints-cart-services/webpack.config.js"
+      },
+      "configurations": {
+        "development": {},
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "flexprints-cart-services:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "flexprints-cart-services:build:development"
+        },
+        "production": {
+          "buildTarget": "flexprints-cart-services:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/flexprints-cart-services/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
