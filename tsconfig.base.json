@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@flexprints/dtos": ["libs/dtos/src/index.ts"],
+      "@flexprints/enums": ["libs/enums/src/index.ts"],
+      "@flexprints/interfaces": ["libs/interfaces/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
