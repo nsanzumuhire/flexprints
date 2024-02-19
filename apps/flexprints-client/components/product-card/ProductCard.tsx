@@ -5,7 +5,7 @@ import { Eye } from "react-feather";
 
 const ProductCard = ({images, id, title, price, thumbnail}:any) => {
 	return (
-		<Link href={`/products/${id}`} className="w-full">
+		<Link href={`/product/${id}`} className="w-full">
 		<div >
 			<div className="rounded-md  w-full">
 				<img src={thumbnail} className="h-[260px] sm:h-[220px] lg:h-[320px] 2xl:h-[270px] w-full rounded-md object-cover" />

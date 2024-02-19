@@ -5,7 +5,7 @@ const MyOrdersShoppingListCard = ({type}: any) => {
 	// console.log(type);
 	return (
 		<div className=" flex items-center justify-between my-12">
-			
+
 			<div className=" flex items-center">
 				<div className=" w-[250px] h-[130px]">
 					<img
@@ -38,11 +38,11 @@ const MyOrdersShoppingListCard = ({type}: any) => {
 
 			<div className=" flex flex-col self-stretch justify-around">
 				<button className=" btn bg-main text-white hover:bg-main">
-					{type === 'myOrders' ? 'Buy again' : 'Add to cart'} 
+					{type === 'myOrders' ? 'Buy again' : 'Add to cart'}
 				</button>
 				<button className="btn bg-transparent border-0 shadow-none text-main hover:bg-grayMain/30 hover:text-black">
 					{" "}
-					{type === 'myOrders' ? 'View order details' : 'Delete item'} 
+					{type === 'myOrders' ? 'View order details' : 'Delete item'}
 				</button>
 			</div>
 		</div>

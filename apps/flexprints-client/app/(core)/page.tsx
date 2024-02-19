@@ -1,5 +1,5 @@
-import FilterList from "./components/filter-list/FilterList";
-import ProductCard from "./components/product-card/ProductCard";
+import FilterList from "../../components/filter-list/FilterList";
+import ProductCard from "../../components/product-card/ProductCard";
 
 export default async function Index() {
   const res = await fetch("https://dummyjson.com/products");

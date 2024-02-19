@@ -47,10 +47,6 @@ function Header() {
 						{" "}
 						<Link href="/dashboard"> Products </Link>
 					</div>
-					<div className=" mr-8">
-						{" "}
-						<Link href="/dashboard"> Design Templates </Link>{" "}
-					</div>
 					<div>
 						{" "}
 						<Link href="/dashboard"> Go Pro </Link>
@@ -162,7 +158,7 @@ function Header() {
 						<ul>
 							<li className=" py-4 hover:bg-red-100 px-6">
 								<Link
-									href={`/myorders`}
+									href={`/my-orders`}
 									onClick={() => setShowProfileDrpdwn(false)}
 								>
 									{" "}
@@ -171,7 +167,7 @@ function Header() {
 							</li>
 							<li className=" py-4 hover:bg-red-100  px-6">
 								<Link
-									href={`/myshoppinglist`}
+									href={`/my-shopping-list`}
 									onClick={() => setShowProfileDrpdwn(false)}
 								>
 									My Shopping List
