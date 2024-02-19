@@ -1,13 +1,14 @@
-import { Field, Int, ObjectType } from '@nestjs/graphql';
-import { Prop } from '@nestjs/mongoose';
+import { Directive, Field, Int, ObjectType } from '@nestjs/graphql';
 
 @ObjectType()
+@Directive(
+  '@key(fields: "data,position,imageNewColors,imageColors,isRemoveWhite,isGrayScale,rotateRatio,cropRatio,uploadSize")'
+)
 export class ImageContentDto {
-  @Field(() => [Int], { nullable: true })
-  @Prop({ type: [Number] })
+  @Field(() => [Int])
   uploadSize!: number[]; // [60,60],
 
-  @Field({ nullable: true })
+  @Field(() => [Int])
   cropRatio!: number;
 
   @Field({ nullable: true })
@@ -20,15 +21,12 @@ export class ImageContentDto {
   isRemoveWhite!: boolean;
 
   @Field(() => [String], { nullable: true })
-  @Prop({ type: [String] })
   imageColors!: string[]; //["#fff","#000"]
 
   @Field(() => [String], { nullable: true })
-  @Prop({ type: [String] })
   imageNewColors!: string[];
 
   @Field(() => [Int], { nullable: true })
-  @Prop({ type: [Number] })
   position!: number[]; // WxH [234.5, 67.9]
 
   @Field({ nullable: true })

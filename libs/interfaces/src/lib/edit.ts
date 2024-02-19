@@ -5,6 +5,6 @@ export interface IEdit {
   productId: string;
   userId: string;
   isDraft: boolean;
-  front: ProductContent;
-  back: ProductContent;
+  front?: ProductContent;
+  back?: ProductContent;
 }

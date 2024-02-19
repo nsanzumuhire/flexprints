@@ -13,17 +13,18 @@ export class EditResolver {
   constructor(private editService: EditService) {}
 
   @Mutation(() => Edit)
-  async createEdit(args: Edit): Promise<Edit> {
+  // todo: createEditInput later
+  async CoreserviceCreateEdit(args: Edit): Promise<Edit> {
     return await this.editService.createEdit(args);
   }
 
   @Query(() => Edit)
-  async getEdit(@Args('id') id: string): Promise<Edit> {
+  async CoreserviceGetEditById(@Args('id') id: string): Promise<Edit> {
     return this.editService.getEdit(id);
   }
 
   @Query(() => [Edit])
-  async getAllEdit(): Promise<Edit[]> {
+  async CoreserviceGetAllEdits(): Promise<Edit[]> {
     return this.editService.getAllEdits();
   }
 

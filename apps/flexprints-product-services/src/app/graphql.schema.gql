@@ -1,0 +1,71 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+enum EALignment {
+  CENTER
+  LEFT
+  RIGHT
+}
+
+enum EProductType {
+  HODDIE
+  T_SHIRT
+  T_SHIRT_LONG
+}
+
+type ImageContentDto {
+  cropRatio: [Int!]!
+  data: String
+  imageColors: [String!]
+  imageNewColors: [String!]
+  isGrayScale: Boolean
+  isRemoveWhite: Boolean
+  position: [Int!]
+  rotateRatio: Float
+  uploadSize: [Int!]!
+}
+
+type Mutation {
+  ProductServiceCreateProduct: Product!
+  createProduct: Product!
+}
+
+type Product {
+  basePrice: SizeDataDto!
+  colors: [String!]!
+  id: ID!
+  name: String!
+  type: EProductType!
+}
+
+type ProductContentDto {
+  images: [ImageContentDto!]!
+  texts: [TextContentDto!]!
+}
+
+type Query {
+  ProductServiceGetAllProduct: [Product!]!
+  ProductServiceGetProductById(id: String!): Product!
+  getAllProducts: [Product!]!
+  getProduct: Product!
+}
+
+type SizeDataDto {
+  large: Float
+  medium: Float
+  small: Float
+  xlarge: Float
+}
+
+type TextContentDto {
+  alignment: EALignment!
+  cropRatio: Float!
+  data: String!
+  fontFamily: String!
+  fontSize: [Int!]!
+  isOutline: Boolean!
+  position: [Int!]!
+  rotateRatio: Float!
+  textColor: String!
+}

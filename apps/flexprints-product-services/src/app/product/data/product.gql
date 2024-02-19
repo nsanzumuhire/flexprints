@@ -1,0 +1,39 @@
+mutation {
+  createProduct(
+    createProductInput: {
+      name: "t-shirt"
+      type: T_SHIRT
+      colors: ["#fff", "#000"]
+      basePrice: { small: 3000, large: 5000, xlarge: 6000, medium: 0 }
+    }
+  ) {
+    id
+    name
+    type
+    basePrice {
+      small
+      large
+      medium
+      xlarge
+    }
+    colors
+  }
+}
+
+query {
+  getAllProducts {
+    id
+    name
+    type
+    colors
+  }
+}
+
+query {
+  getProduct(id: "product_id") {
+    id
+    name
+    type
+    colors
+  }
+}

@@ -1,26 +1,27 @@
 import { ProductContentDto } from '@flexprints/dtos';
-import { ObjectId } from 'mongodb';
-import { Directive, Field, ID, ObjectType } from '@nestjs/graphql';
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { IEdit } from '@flexprints/interfaces';
+import { Field, ID, ObjectType } from '@nestjs/graphql';
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { ObjectId } from 'mongodb';
+import * as mongoose from 'mongoose';
 
 @ObjectType()
 @Schema()
 export class Edit implements IEdit {
+  @Prop({ type: mongoose.Schema.Types.ObjectId })
   @Field(() => ID)
-  @Directive('@key(fields: "id")')
   id: ObjectId;
 
+  @Prop({ type: String, required: true })
   @Field()
-  @Prop({ required: true })
   userId: string;
 
+  @Prop({ type: Boolean, required: true })
   @Field()
-  @Prop()
   isDraft: boolean;
 
+  @Prop({ type: String, required: true })
   @Field()
-  @Prop({ required: true })
   productId: string;
 
   @Field()

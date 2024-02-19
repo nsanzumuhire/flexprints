@@ -1,33 +1,42 @@
 import { EALignment } from '@flexprints/enums';
-import { Field, Int, ObjectType, registerEnumType } from '@nestjs/graphql';
+import {
+  Directive,
+  Field,
+  Int,
+  ObjectType,
+  registerEnumType,
+} from '@nestjs/graphql';
 
 @ObjectType()
+@Directive(
+  '@key(fields: "fontSize,fontFamily,isOutline,alignment,textColor,position,rotateRatio,cropRatio,data")'
+)
 export class TextContentDto {
-  @Field(() => [Int], { nullable: true })
+  @Field(() => [Int])
   fontSize!: number[]; // [60,60],
 
-  @Field({ nullable: true })
+  @Field()
   fontFamily!: string;
 
-  @Field({ nullable: true })
+  @Field()
   rotateRatio!: number;
 
-  @Field({ nullable: true })
+  @Field()
   cropRatio!: number;
 
-  @Field({ nullable: true })
+  @Field()
   isOutline!: boolean;
 
-  @Field(() => EALignment, { nullable: true })
+  @Field(() => EALignment)
   alignment!: EALignment;
 
-  @Field({ nullable: true })
+  @Field()
   textColor!: string; // "#fff",
 
-  @Field(() => [Int], { nullable: true })
+  @Field(() => [Int])
   position!: number[]; // WxH [234.5, 67.9],
 
-  @Field({ nullable: true })
+  @Field()
   data!: string;
 }
 

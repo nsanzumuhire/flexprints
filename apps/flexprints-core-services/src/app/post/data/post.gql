@@ -1,0 +1,44 @@
+mutation {
+  createPost(
+    createPostInput: {
+      userId: "usr_id"
+      names: "Nsanzumuhire Daniel"
+      title: "Ishaza Friday"
+      description: "kjsdhfksjf..."
+      price: 14000
+      editId: "dsfgdfsg"
+      thumbnail: ""
+    }
+  ) {
+    userId
+    names
+    title
+    description
+    price
+    editId
+    thumbnail
+  }
+}
+
+query {
+  getAllPosts {
+    userId
+    names
+    title
+    description
+    price
+    editId
+    thumbnail
+  }
+}
+
+query {
+  getPost(id: "user_id") {
+    names
+    title
+    description
+    price
+    editId
+    thumbnail
+  }
+}

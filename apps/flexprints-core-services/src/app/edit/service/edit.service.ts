@@ -13,6 +13,7 @@ export class EditService {
 
   @Mutation(() => Edit)
   async createEdit(edit: Edit): Promise<Edit> {
+    //todo: logic to check existence
     return await new this.editRepository(edit).save();
   }
 

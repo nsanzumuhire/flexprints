@@ -2,8 +2,8 @@ import { EProductType } from '@flexprints/enums';
 import { SizeData } from './size-data';
 
 export interface IProduct {
-  // collection
-  id: string;
+  id?: unknown;
+  creatorId?: string;
   name: string;
   type: EProductType;
   colors: string[];

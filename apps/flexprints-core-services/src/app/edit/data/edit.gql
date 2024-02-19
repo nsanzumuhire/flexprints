@@ -3,41 +3,22 @@ mutation {
     createEditInput: {
       productId: "product_id"
       front: {
-        texts: {
-          isOutline: true
-          cropRatio: 0
-          rotateRatio: 0
-          fontSize: 13
-          fontFamily: "Font sans"
-          textColor: "#fff"
-          position: [34, 43]
-          alignment: CENTER
-        }
-        images: {
+        images: [{
           cropRatio: 0
           rotateRatio: 0
           position: [34, 43]
           isGrayScale: true
           isRemoveWhite: false
           imageNewColors: []
-          uploadSize: [34, 54]
-        }
+          uploadSize: [34, 54],
+          data: '
+        }]
       }
       back: { texts: null, images: null }
     }
   ) {
     productId
     front {
-      texts {
-        isOutline
-        cropRatio
-        rotateRatio
-        fontSize
-        fontFamily
-        textColor
-        position
-        alignment
-      }
       images {
         cropRatio
         rotateRatio
@@ -46,26 +27,6 @@ mutation {
         isRemoveWhite
         imageNewColors
         uploadSize
-      }
-    }
-    back {
-      texts {
-        isOutline
-        cropRatio
-        rotateRatio
-        fontSize
-        fontFamily
-        textColor
-        position
-        alignment
-      }
-      images {
-        cropRatio
-        rotateRatio
-        position
-        isGrayScale
-        isRemoveWhite
-        imageNewColors
       }
     }
   }

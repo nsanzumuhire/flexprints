@@ -1,0 +1,88 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+enum EALignment {
+  CENTER
+  LEFT
+  RIGHT
+}
+
+type Edit {
+  back: ProductContentDto!
+  front: ProductContentDto!
+  id: ID!
+  isDraft: Boolean!
+  productId: String!
+  userId: String!
+}
+
+type ImageContentDto {
+  cropRatio: [Int!]!
+  data: String
+  imageColors: [String!]
+  imageNewColors: [String!]
+  isGrayScale: Boolean
+  isRemoveWhite: Boolean
+  position: [Int!]
+  rotateRatio: Float
+  uploadSize: [Int!]!
+}
+
+type Mutation {
+  CoreserviceCreateEdit: Edit!
+  CoreserviceCreatePost: Post!
+  createEdit: Edit!
+  createPost: Post!
+}
+
+type Post {
+  collectionId: String!
+  createdDate: String!
+  description: String!
+  editId: String!
+  id: ID!
+  isDisabled: Boolean
+  names: String!
+  price: Float!
+  slug: String!
+  status: Boolean
+  thumbnail: String!
+  updatedDate: String!
+  userId: String!
+}
+
+type ProductContentDto {
+  images: [ImageContentDto!]!
+  texts: [TextContentDto!]!
+}
+
+type Query {
+  CoreserviceGetAllEdits: [Edit!]!
+  CoreserviceGetAllPost: [Post!]!
+  CoreserviceGetEditById(id: String!): Edit!
+  CoreserviceGetPostById(id: String!): Post!
+  getAllEdits: [Edit!]!
+  getAllPosts: [Post!]!
+  getEdit: Edit!
+  getPost: Post!
+}
+
+type SizeDataDto {
+  large: Float
+  medium: Float
+  small: Float
+  xlarge: Float
+}
+
+type TextContentDto {
+  alignment: EALignment!
+  cropRatio: Float!
+  data: String!
+  fontFamily: String!
+  fontSize: [Int!]!
+  isOutline: Boolean!
+  position: [Int!]!
+  rotateRatio: Float!
+  textColor: String!
+}

@@ -1,0 +1,53 @@
+{
+  "name": "flexprints-product-services",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/flexprints-product-services/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/flexprints-product-services",
+        "main": "apps/flexprints-product-services/src/main.ts",
+        "tsConfig": "apps/flexprints-product-services/tsconfig.app.json",
+        "assets": ["apps/flexprints-product-services/src/assets"],
+        "webpackConfig": "apps/flexprints-product-services/webpack.config.js"
+      },
+      "configurations": {
+        "development": {},
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "flexprints-product-services:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "flexprints-product-services:build:development"
+        },
+        "production": {
+          "buildTarget": "flexprints-product-services:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/flexprints-product-services/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
