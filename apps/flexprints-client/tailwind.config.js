@@ -30,6 +30,8 @@ module.exports = {
     extend: {
       colors: {
         main: '#C3002F',
+        'main-100': '#F4CCCC',
+        'main-50': '#FDEDED',
         grayMain: '#6E6D7A',
         primary: {
           500: '#624CF5',

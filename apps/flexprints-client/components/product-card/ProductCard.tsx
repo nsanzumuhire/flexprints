@@ -12,9 +12,9 @@ const ProductCard = ({images, id, title, price, thumbnail}:any) => {
 			</div>
 			<div className="flex justify-between my-4 text-sm">
 				<div className="flex items-center">
-					<img src={images[1]} alt=""  className="w-[30px] h-[30px] rounded-full mr-2"/>
+					<img src={images[1]} alt=""  className="w-[24px] h-[24px] rounded-full mr-2 border border-0.5"/>
 					<p className="mr-4">{title}</p>
-					<p className="text-main bg-grayMain/10 px-2 rounded-md font-medium text-xs">New</p>
+					<p className="text-gray-600 bg-main-50 px-2 py-1 rounded-full font-bold text-xs">New</p>
 				</div>
 				<div className="flex items-center">
 					<p className="mr-4">Rwf {price}</p>

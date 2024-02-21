@@ -4,7 +4,7 @@ import { Twitter, Instagram, Facebook } from "react-feather";
 
 function Footer() {
 	return (
-		<div className="bg-gray-100 px-40 text-[#6E6D7A]">
+		<div className="bg-gray-100 px-40 text-[#6E6D7A] text-sm">
 			<div className=" flex justify-between border-b border-gray-200 py-16 ">
 				<div className=" w-1/4">
 					<p className=" font-bold mb-8">Creators</p>
@@ -52,7 +52,7 @@ function Footer() {
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
 	);
 }

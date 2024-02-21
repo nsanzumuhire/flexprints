@@ -1,7 +1,9 @@
 {
+  "plugins": ["html"],
   "extends": [
     "plugin:@nx/react-typescript",
     "next",
+    "plugin:html/recommended",
     "next/core-web-vitals",
     "../../.eslintrc.json"
   ],
@@ -16,6 +18,7 @@
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
+        "no-multi-spaces": "error",
         "@next/next/no-html-link-for-pages": [
           "error",
           "apps/flexprints-client/pages"

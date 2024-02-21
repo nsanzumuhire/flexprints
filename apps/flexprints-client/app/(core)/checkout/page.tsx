@@ -46,7 +46,7 @@ const Checkout = () => {
 								<Field
 									name="firstname"
 									placeholder="First name"
-									className=" bg-grayMain/10 p-2 rounded  placeholder:text-xs border-0"
+									className=" bg-grayMain/10 p-2 rounded-full  placeholder:text-xs border-0"
 								/>
 
 								<ErrorMessage
@@ -59,7 +59,7 @@ const Checkout = () => {
 								<Field
 									name="lastname"
 									placeholder="Last name"
-									className=" bg-grayMain/10 p-2 rounded  placeholder:text-xs border-0"
+									className=" bg-grayMain/10 p-2 rounded-full  placeholder:text-xs border-0"
 								/>
 								<ErrorMessage
 									component="a"
@@ -74,7 +74,7 @@ const Checkout = () => {
 								<Field
 									name="phoneNumber"
 									placeholder="Phone number"
-									className=" bg-grayMain/10 p-2 rounded  placeholder:text-xs border-0"
+									className=" bg-grayMain/10 p-2 rounded-full  placeholder:text-xs border-0"
 								/>
 								<ErrorMessage
 									component="a"
@@ -86,7 +86,7 @@ const Checkout = () => {
 								<Field
 									name="email"
 									placeholder="Email"
-									className=" bg-grayMain/10 p-2 rounded  placeholder:text-xs border-0"
+									className=" bg-grayMain/10 p-2 rounded-full  placeholder:text-xs border-0"
 								/>
 								<ErrorMessage
 									component="a"
@@ -106,7 +106,7 @@ const Checkout = () => {
 								<Field
 									name="sector"
 									placeholder="Sector"
-									className=" bg-grayMain/10 p-2 rounded  placeholder:text-xs border-0"
+									className=" bg-grayMain/10 p-2 rounded-full  placeholder:text-xs border-0"
 								/>
 								<ErrorMessage
 									component="a"
@@ -118,7 +118,7 @@ const Checkout = () => {
 								<Field
 									name="streetNumber"
 									placeholder="Street number"
-									className=" bg-grayMain/10 p-2 rounded  placeholder:text-xs border-0"
+									className=" bg-grayMain/10 p-2 rounded-full  placeholder:text-xs border-0"
 								/>
 								<ErrorMessage
 									component="a"
@@ -135,7 +135,7 @@ const Checkout = () => {
 								<Field
 									name="houseNumber"
 									placeholder="House number"
-									className=" bg-grayMain/10 p-2 rounded  placeholder:text-xs border-0"
+									className=" bg-grayMain/10 p-2 rounded-full  placeholder:text-xs border-0"
 								/>
 								<ErrorMessage
 									component="a"
@@ -147,7 +147,7 @@ const Checkout = () => {
 								<Field
 									name="otherInfo"
 									placeholder="Other info"
-									className=" bg-grayMain/10 p-2 rounded  placeholder:text-xs border-0"
+									className=" bg-grayMain/10 p-2 rounded-full  placeholder:text-xs border-0"
 								/>
 								<ErrorMessage
 									component="a"
@@ -214,7 +214,7 @@ const Checkout = () => {
 									<Field
 										name="momoNumber"
 										placeholder="078..."
-										className=" bg-grayMain/10 p-2 rounded  placeholder:text-xs border-0"
+										className=" bg-grayMain/10 p-2 rounded-full  placeholder:text-xs border-0"
 									/>
 									<ErrorMessage
 										component="a"
@@ -238,7 +238,7 @@ const Checkout = () => {
 										<Field
 											name="cardNumber"
 											placeholder="Card number"
-											className=" bg-grayMain/10 p-2 rounded  placeholder:text-xs border-0"
+											className=" bg-grayMain/10 p-2 rounded-full  placeholder:text-xs border-0"
 										/>
 										<ErrorMessage
 											component="a"
@@ -255,7 +255,7 @@ const Checkout = () => {
 												type="date"
 												name="expiryDate"
 												placeholder="Expiry date"
-												className=" bg-grayMain/10 p-2 rounded  placeholder:text-xs border-0"
+												className=" bg-grayMain/10 p-2 rounded-full  placeholder:text-xs border-0"
 											/>
 											<ErrorMessage
 												component="a"
@@ -267,7 +267,7 @@ const Checkout = () => {
 											<Field
 												name="cvccvv"
 												placeholder="CVC/CVV"
-												className=" bg-grayMain/10 p-2 rounded  placeholder:text-xs border-0"
+												className=" bg-grayMain/10 p-2 rounded-full  placeholder:text-xs border-0"
 											/>
 											<ErrorMessage
 												component="a"
@@ -278,12 +278,6 @@ const Checkout = () => {
 									</div>
 								</div>
 							)}
-						</div>
-
-						<div className="mt-8">
-							<button type="submit" className="btn">
-								Console Log
-							</button>
 						</div>
 					</Form>
 				</Formik>
