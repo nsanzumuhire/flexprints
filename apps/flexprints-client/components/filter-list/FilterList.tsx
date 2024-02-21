@@ -8,13 +8,13 @@ function FilterList() {
 			<div className="flex">
 				<div className=" flex-1 flex justify-center items-center">
 					<div className="text-sm">
-						<Link href="/" className="mx-4 bg-main-50 px-4 py-2 rounded-full">All</Link>
-						<Link href="/prints/hoodies" className="mx-4 px-4 py-2">Hoodies</Link>
-						<Link href="/prints/Sweatshirt" className="mx-4 px-4 py-2">Sweatshirt</Link>
-						<Link href="/prints/Jackets" className="mx-4 px-4 py-2">Jackets</Link>
-						<Link href="/prints/>t-Shirts" className="mx-4 px-4 py-2">T-Shirts</Link>
-						<Link href="/prints/hats" className="mx-4 px-4 py-2">Hats</Link>
-						<Link href="/prints/head-warmers" className="mx-4 px-4 py-2">Head warmers</Link>
+						<Link href="/" className="mx-4 bg-main-50 px-4 py-2 rounded-full hover:text-main">All</Link>
+						<Link href="/prints/hoodies" className="mx-4 px-4 py-2 hover:text-main">Hoodies</Link>
+						<Link href="/prints/Sweatshirt" className="mx-4 px-4 py-2 hover:text-main">Sweatshirt</Link>
+						<Link href="/prints/Jackets" className="mx-4 px-4 py-2 hover:text-main">Jackets</Link>
+						<Link href="/prints/>t-Shirts" className="mx-4 px-4 py-2 hover:text-main">T-Shirts</Link>
+						<Link href="/prints/hats" className="mx-4 px-4 py-2 hover:text-main">Hats</Link>
+						<Link href="/prints/head-warmers" className="mx-4 px-4 py-2 hover:text-main">Head warmers</Link>
 					</div>
 				</div>
 

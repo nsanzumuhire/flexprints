@@ -38,15 +38,19 @@ function Header() {
 				<div className=" flex text-gray-600">
 					<div className=" mr-8">
 						{" "}
-						<Link href="/dashboard"> Discover creators </Link>{" "}
+						<Link href="/dashboard" className="hover:text-main"> Discover creators </Link>{" "}
 					</div>
 					<div className=" mr-8">
 						{" "}
-						<Link href="/dashboard"> Products </Link>
+						<Link href="/dashboard" className="hover:text-main"> Products </Link>
+					</div>
+          <div className=" mr-8">
+						{" "}
+						<Link href="/dashboard" className="hover:text-main"> Collections </Link>
 					</div>
 					<div>
 						{" "}
-						<Link href="/dashboard"> Go Pro </Link>
+						<Link href="/dashboard" className="hover:text-main"> Go Pro </Link>
 					</div>
 				</div>
 				<div className="flex items-center bg-gray-100 py-1  px-2 w-[500px] rounded-full">
